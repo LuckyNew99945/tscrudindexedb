@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css" integrity="sha512-+4zCK9k+qNFUR5X+cKL9EIR+ZOhtIloNl9GIKS57V1MyNsYpYcUrUeQc9vNfzsWfV28IaLL3i96P9sdNyeRssA==" crossorigin="anonymous" />
+  <link rel="stylesheet" href="style.css">
+  <title>CrudIndexedDB</title>
+</head>
+<body>
+
+  <div class="container text-center">
+    <h1 class="bg-light py-4 text-info"><i class="fas fa-plug"></i> CRUD IndexedDB</h1>
+  </div>
+
+  <div class="d-flex justify-content-center">
+    <form class="w-50">
+      <input type="number" id="userId" readonly class="form-control" placeholder="ID" autocomplete="off">
+      <input type="text" id="proName" class="form-control" placeholder="Product Name" autocomplete="off">
+      <div class="row">
+        <div class="col">
+          <input type="text" id="seller" class="form-control m-0" placeholder="Seller" autocomplete="off">
+        </div>
+        <div class="col">
+          <input type="number" id="price" class="form-control m-0" placeholder="Price" autocomplete="off">
+        </div>
+      </div>
+    </form>
+  </div>
+
+  <!-- Create,Update,Read,Delete -->
+
+  <div class="d-flex justify-content-center">
+    <button class="btn btn-success" id="btnCreate">Create</button>
+    <button class="btn btn-primary" id="btnRead">Read</button>
+    <button class="btn btn-warning" id="btnUpdate">Update</button>
+    <button class="btn btn-danger" id="btnDelete">Delete All</button>
+ 
+  </div>
+
+  <div class="container d-flex">
+    <table class="table table-striped">
+      <thead>
+        <tr>
+          <th scope="col">ID</th>
+          <th scope="col">Product Name</th>
+          <th scope="col">Seller</th>
+          <th scope="col">Price</th>
+          <th scope="col">Edit</th>
+          <th scope="col">Delete</th>
+        </tr>
+      </thead>
+      <tbody id="tBody">
+        <!-- <tr>
+          <th scope="row">1</th>
+          <td>Mark</td>
+          <td>Otto</td>
+          <td>@mdo</td>
+          <td><i class="fas fa-edit btn-edit"></i></td>
+          <td><i class="fas fa-trash-alt btn-delete"></i></td>
+        </tr>
+        <tr>
+          <th scope="row">2</th>
+          <td>Jacob</td>
+          <td>Thornton</td>
+          <td>@fat</td>
+          <td><i class="fas fa-edit btn-edit"></i></td>
+          <td><i class="fas fa-trash-alt btn-delete"></i></td>
+        </tr>
+        <tr>
+          <th scope="row">3</th>
+          <td>Larry</td>
+          <td>the Bird</td>
+          <td>@twitter</td>
+          <td><i class="fas fa-edit btn-edit"></i></td>
+          <td><i class="fas fa-trash-alt btn-delete"></i></td>
+        </tr>
+      </tbody> -->
+    </table>
+  </div>
+  <div class="container text-center">
+    <div class="notfound"></div>
+  </div>
+
+  <div class="w-100 btn btn-success insertmsg">Data Inserted Sucess</div>
+  <div class="w-100 btn btn-warning updatemsg">Data Updated Refresh Database</div>
+  <div class="w-100 btn btn-danger deletemsg">Data Deleted</div>
+  
+  
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.min.js" integrity="sha384-w1Q4orYjBQndcko6MimVbzY0tgp4pWB4lZ7lr30WKz0vr/aWKhXdBNmNb5D92v7s" crossorigin="anonymous"></script>
+<script src="./dist/bundle.js"></script>
+</body>
+</html>
